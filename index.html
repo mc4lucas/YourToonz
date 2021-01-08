@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YourToonz</title>
+    <meta name="theme-color" content="#ff0000"/>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+      </script>
+</head>
+<body>
+    <input type="file" id="File-Selector" multiple>
+    <button onclick="changeVol(-0.1)">Vol Down</button>
+    <button onclick="ChangePick(-1)">Prev</button>
+    <button onclick="playMusic()">Play</button>
+    <button onclick="stopMusic()">Stop</button>
+    <button onclick="ChangePick(1)">Next</button>
+    <button onclick="changeVol(0.1)">Vol Up</button>
+
+    <!-- progress bar -->
+    <label for="playlength">Progress:</label>
+    <progress id="playlength" value="" max=""></progress>
+    <h1 id="percent"></h1>
+    
+    <audio controls id="audiosource" src="" type="audio/mpeg" hidden></audio>
+    
+    <ul id="fileList"></ul>
+</body>
+
+  <!-- import javascript -->
+  <script src="music.js"></script>
+
+</html>
