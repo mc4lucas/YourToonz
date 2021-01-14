@@ -1,6 +1,7 @@
 {
     "short_name": "YourToonz",
     "name": "Your Music Player",
+    "description": "music player PWA",
     "lang": "en-GB",
     "start_url": "/index.html",
     "background_color": "#000000",
