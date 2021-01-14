@@ -3,7 +3,7 @@
     "name": "Your Music Player",
     "icons": [
       {
-        "src": "images/icons-192.png",
+        "src": "images/ico.png",
         "type": "image/png",
         "sizes": "192x192"
       },
