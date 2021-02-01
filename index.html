@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>YourToonz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="styles.css" /> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
@@ -44,22 +44,44 @@
  
 </head>
 <body>
-  <input type="file" id="File-Selector" multiple>
-  <button onclick="changeVol(-0.1)">Vol Down</button>
-  <button onclick="ChangePick(-1)">Prev</button>
-  <button onclick="playMusic()">Play</button>
-  <button onclick="stopMusic()">Stop</button>
-  <button onclick="ChangePick(1)">Next</button>
-  <button onclick="changeVol(0.1)">Vol Up</button>
+  <div class="container">
+    <div class="controls">
+      <button onclick="changeVol(-0.1)">Vol Down</button>
+      
+      <button onclick="playMusic()">Play</button>
+      <button onclick="stopMusic()">Stop</button>
+      
+      <button onclick="changeVol(0.1)">Vol Up</button>
 
-  <!-- progress bar -->
-  <label for="playlength">Progress:</label>
-  <progress id="playlength" value="" max=""></progress>
-  <h1 id="percent"></h1>
+      <input type="file" id="File-Selector" multiple>
+    </div>
     
-  <audio controls id="audiosource" src="" type="audio/mpeg" hidden></audio>
     
-  <ul id="fileList"></ul>
+  
+    <!-- progress bar
+    <label for="playlength">Progress:</label>
+    <progress id="playlength" value="" max=""></progress>
+    <h1 id="percent"></h1> -->
+      
+    <audio controls id="audiosource" src="" type="audio/mpeg" hidden></audio>
+      
+    <ul id="fileList"></ul>
+  
+  <div class="spacer"></div>
+
+  <div class="progress">
+    <button onclick="ChangePick(-1)">Prev</button>
+    <progress id="playlength" value="" max=""></progress>
+    <button onclick="ChangePick(1)">Next</button>
+  </div>
+  
+    <div class="layers">
+      <button onclick="" class="layerbtns">Player</button>
+      <button onclick="" class="layerbtns">Media</button>
+    </div>
+  </div>
+  
+
 
   <!-- import javascript -->
   <script src="app.js"></script>
