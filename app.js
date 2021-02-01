@@ -50,12 +50,13 @@ function playMusic(){
     audiosource.src = URL.createObjectURL(files[currentpick]);
     audiosource.play();
     test();
-    test3();
+    // test3();
 
     //duration testing
     audiosource.addEventListener("loadeddata", function() {
     var songlength = this.duration;
     document.getElementById('playlength').max = songlength; 
+    console.log(songlength);
 });
 }
 
@@ -82,6 +83,7 @@ function changeVol(changevol){
 
 function test(){
     var currenttime = audiosource.currentTime;
+    console.log(currenttime);
     document.getElementById('playlength').value = currenttime;
     setTimeout( test, 1000);
 }
