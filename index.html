@@ -45,17 +45,23 @@
 </head>
 <body>
   <div class="container">
-    <div class="controls">
-      <button onclick="changeVol(-0.1)">Vol Down</button>
-      
-      <button onclick="playMusic()">Play</button>
-      <button onclick="stopMusic()">Stop</button>
-      
-      <button onclick="changeVol(0.1)">Vol Up</button>
-
-      <input type="file" id="File-Selector" multiple>
+    <div class="playercontent" id="playerContent">
+      <div class="controls">
+        <button onclick="changeVol(-0.1)">Vol Down</button>
+        
+        <button onclick="playMusic()">Play</button>
+        <button onclick="stopMusic()">Stop</button>
+        
+        <button onclick="changeVol(0.1)">Vol Up</button>
+      </div>
     </div>
     
+    <div class="mediacontent" id="mediaContent">
+      <input type="file" id="File-Selector" multiple>
+
+      <ul id="fileList"></ul>
+    </div>
+
     
   
     <!-- progress bar
@@ -65,20 +71,25 @@
       
     
       
-    <ul id="fileList"></ul>
+    
   
   <div class="spacer"></div>
+  
 
-  <div class="progress">
-    <button onclick="ChangePick(-1)">←</button>
-    <progress id="playlength" value="" max=""></progress>
-    <audio controls id="audiosource" src="" type="audio/mpeg" hidden></audio>
-    <button onclick="ChangePick(1)">→</button>
-  </div>
-    <div class="layers">
-      <button onclick="" class="layerbtns">Player</button>
-      <button onclick="" class="layerbtns">Media</button>
+    <div class="playercontent" id="playerContent">
+      <div class="progress">
+        <button onclick="ChangePick(-1)">←</button>
+        <progress class="pb" id="playlength" value="" max=""></progress>
+        <audio controls id="audiosource" src="" type="audio/mpeg" hidden></audio>
+        <button onclick="ChangePick(1)">→</button>
+      </div>
     </div>
+  
+    <div class="layers">
+      <button onclick="toggleScreenPlayer()" class="layerbtns">Player</button>
+      <button onclick="toggleScreenMedia()" class="layerbtns">Media</button>
+    </div>
+
   </div>
   
 

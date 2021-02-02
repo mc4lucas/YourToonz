@@ -33,6 +33,11 @@ audiosource.addEventListener('ended', (event) =>{
 });
 
 
+
+toggleScreenPlayer()
+
+
+
 // music
 
 function playMusic(){
@@ -95,4 +100,20 @@ function test3(){
     setTimeout( test3, 1000);
 }
 
-//changing for test can be deleted
+
+//functions to toggle the player and media screens active or inactive
+
+function toggleScreenPlayer(){
+    var a = document.getElementById("playerContent");
+    var b = document.getElementById("mediaContent");
+
+    a.style.display = "block";
+    b.style.display = "none";
+}
+function toggleScreenMedia(){
+    var a = document.getElementById("playerContent");
+    var b = document.getElementById("mediaContent");
+
+    a.style.display = "none";
+    b.style.display = "block";
+}
