@@ -9,7 +9,7 @@
  "background_color": "#E6E6FA",
  "icons": [
   {
-   "src": "icons/android-icon-36x36.png",
+   "src": "icons/favicon-16x16.png",
    "sizes": "36x36",
    "type": "image\/png",
    "density": "0.75"
